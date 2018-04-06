@@ -9,33 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class AccountDao {
-    AccountDao(){
-
-    }
-    public List<Account> getAll(){
-        return accountDaoMock.getData();
-    }
-    public List<Account> getById(Long id){
-        List<Account> list = new ArrayList<Account>();
-        List<Account> listAll = getAll();
-        for(Account account: listAll){
-            if(account.getId() == id){
-                list.add(account);
-            }
-        }
-        return list;
-    }
-    public List<Account> getByOwner(Long ownerId){
-        List<Account> list = new ArrayList<Account>();
-        List<Account> listAll = getAll();
-        for(Account account: listAll){
-            if(account.getOwnerId() == ownerId){
-                list.add(account);
-            }
-        }
-        return list;
-    }
-    @Autowired
-    private AccountDaoMock accountDaoMock;
+public interface AccountDao {
+    public List<Account> getAll();
+    public List<Account> getById(Long id);
+    public List<Account> getByOwner(Long ownerId);
 }

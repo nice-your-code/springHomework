@@ -3,8 +3,7 @@ package ru.liga;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import ru.liga.config.Config;
-import ru.liga.dao.AccountService;
-import ru.liga.domain.Account;
+import ru.liga.service.AccountService;
 
 /**
  * Hello world!

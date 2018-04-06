@@ -1,6 +1,11 @@
 package ru.liga.domain;
 
 public class Account {
+    private Long id;
+    private Long ownerId;
+    private String name;
+    private Double volume;
+
     public Account(Long id, Long ownerId, String name, Double volume){
         this.id = id;
         this.name = name;
@@ -49,9 +54,4 @@ public class Account {
     public void setVolume(Double volume) {
         this.volume = volume;
     }
-
-    private Long id;
-    private Long ownerId;
-    private String name;
-    private Double volume;
 }
